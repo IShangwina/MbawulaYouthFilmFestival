@@ -69,7 +69,26 @@ header.scrolled .hamburger span {
 
 /* LOGO */
 .logo {
-  max-height: 50px;
+  height: 50px;
+  width: auto;
+  transition: opacity 0.3s ease;
+}
+
+.logo-color {
+  opacity: 1;
+}
+.logo-bw {
+  opacity: 0;
+  position: absolute;
+  left: 2rem; /* Match your navbar padding */
+}
+
+/* Scrolled state - B&W logo visible */
+header.scrolled .logo-color {
+  opacity: 0;
+}
+header.scrolled .logo-bw {
+  opacity: 1;
 }
 
 /* DESKTOP NAV */
@@ -167,21 +186,7 @@ header.scrolled .hamburger span {
   margin: 0 auto 2rem;
 }
 
-.hero-image-wrapper {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100%;
-  max-width: 400px; /* Smaller than before */
-  z-index: 1;
-  pointer-events: none;
-}
 
-
-.hero-blur-image {
-  width: 100%;
-}
 
 
 /* This keeps hero content above the image visually */
