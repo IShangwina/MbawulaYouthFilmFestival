@@ -1,158 +1,157 @@
 <!DOCTYPE html>
-<html lang="eng">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mbawula Film Festival | 30 Years Of South Africa Through Film</title>
-        <link rel="stylesheet" href="styles.css">
-        </head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Document metadata and resources -->
+    
+    <!-- Character encoding for proper text rendering -->
+    <meta charset="UTF-8">
+    
+    <!-- Viewport settings for responsive design -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Website title shown in browser tab -->
+    <title>Mbawula Youth Film Festival | 30 Years of South Africa Through Film</title>
+    
+    <!-- ========== FAVICON IMPLEMENTATION ========== -->
+    <!-- Favicon for various devices and browsers -->
+    <link rel="icon" href="Assets/Favicon/favicon.ico" sizes="any"> <!-- Legacy .ico format -->
+    <link rel="icon" href="Assets/Favicon/favicon-32x32.png" type="image/png" sizes="32x32"> <!-- Standard size -->
+    <link rel="icon" href="Assets/Favicon/favicon-16x16.png" type="image/png" sizes="16x16"> <!-- Smaller size -->
+    <link rel="apple-touch-icon" href="Assets/Favicon/apple-touch-icon.png"> <!-- For iOS devices -->
+    <link rel="manifest" href="Assets/Favicon/site.webmanifest"> <!-- Web app manifest -->
+    <link rel="mask-icon" href="Assets/Favicon/" color="#FF6B00">
 
-        <!-- === FAVICON === -->
+  <title>Mbawula Youth Film Festival | 30 Years of South Africa Through Film</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="preload" href="Fonts/Montserrat-Regular.ttf" as="font" type="font/ttf" crossorigin>
+</head>
 
+<body>
 
-        <!-- Basic ICO -->
-         <link rel="icon" href="images/favicon.ico" sizes="any">
+  <!-- ====================
+        NAVIGATION BAR
+  ===================== -->
+  <header id="navbar">
+    <div class="nav-left">
+      <!-- INSERT SVG LOGO HERE -->
+      <img src="Assets/MBAWULA 2025 LOGO 2.png" alt="Mbawula Logo" class="logo">
+    </div>
 
-        <!-- Standard PNG -->
-         <link rel="icon" href="images/favicon-32x32.png" type="images/png" sizes="32x32">
-         <link rel="icon" href="images/favicon-16x16.png" type="image/png" sizes="16x16">
+    <nav class="nav-links">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Screenings</a></li>
+        <li><a href="#">Charity</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
-         <!-- Apple Touch -->
-          <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+    <!-- HAMBURGER MENU -->
+    <div class="hamburger" id="hamburger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
 
-        <!-- Android/Manifest -->
-         <link rel="manifest" href="manifest.json">
+    <!-- MOBILE DROPDOWN NAV -->
+    <nav class="mobile-menu" id="mobileMenu">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Screenings</a></li>
+        <li><a href="#">Charity</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-         <!-- Safari Pinned Tab -->
-          <link rel="mask-icon" href="images/safari-pinned-tab.svg" color="#ff6b00">
+  <!-- ====================
+         HERO SECTION
+  ===================== -->
+  <section class="hero">
+     <div class="overlay"></div>
+    <div class="hero-image-wrapper">
+  <img src="Assets/MBAWULA 2025 KID W CROWN.png" alt="Mbawula Youth" class="hero-blur-image" />
+</div>
+    <div class="hero-content">
+      <h1>30 Years of South Africa Through Film</h1>
+      <p>Celebrating the power of youth storytelling through screenings, discussions, and workshops.</p>
+      <a href="#" class="cta-btn">Explore Festival</a>
+    </div>
+  </section>
 
-          <!-- Theme Colors -->
-           <meta name="theme-color" content="#ff6b00">
-           <meta name="msapplication-TitleColor" content="#000000">
+<!-- Add this right before your footer -->
+<div class="film-reel-container">
+  <div class="film-reel">
+    <img src="Assets/MBAWULA 2025 - FILM REEL.png" alt="Film reel texture">
+    <img src="Assets/MBAWULA 2025 - FILM REEL.png" alt="Film reel texture"> <!-- Duplicate for seamless looping -->
+  </div>
+</div>
 
-        <!-- === HEADER === -->
-         <header>
-           <div class="logo">MBAWULA</div>
-          <div class="tagline">Youth Film Festival | 30 Years of South Africa Through Film</div>
-         </header>
+  <!-- ====================
+          FOOTER
+  ===================== -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-left">
+        <p>&copy; 2025 Mbawula Youth Film Festival</p>
+      </div>
+      <div class="footer-right">
+        <a href="#">Privacy Policy</a>
+        <a href="#">Terms of Use</a>
+        <a href="mailto:tdtlnhalogang@gmail.com">Contact Us</a>
+      </div>
+    </div>
+  </footer>
 
-         <!-- === HERO SECTION === --> 
-        <section>
-          <h2>Igniting young creative voices through cinema</h2>
-          <p>Showcasing emerging African filmmakers</p>
-          <div class="countdown">70 DAYS TO GO</div>  <!-- <<< NOTE TO PUT ACTUAL TIMER -->
-        </section>
+  <!-- ====================
+         JAVASCRIPT
+  ===================== -->
+  <script>
+    const hamburger = document.getElementById("hamburger");
+    const mobileMenu = document.getElementById("mobileMenu");
+    const navbar = document.getElementById("navbar");
 
-        <section class="film-section">
-          <h2 class="section-title">Featured Films</h2>
-          <div class="films-grid">
+    // Toggle mobile menu
+    hamburger.addEventListener("click", () => {
+      mobileMenu.classList.toggle("active");
+    });
 
-            <!-- Film Card 1 -->
-             <div class="film-card">
-              <img src="Films/Film 1.jpg" alt="Film Poster" class="film-poster">
-              <h3 class="film-title">Nine Nine</h3>
-              <p class="film-director">Zolile Seoposengwe</p>
-             </div>
-          </div>
+    // Close mobile menu when clicking outside
+    document.addEventListener("click", (event) => {
+      if (!hamburger.contains(event.target) && !mobileMenu.contains(event.target)) {
+        mobileMenu.classList.remove("active");
+      }
+    });
 
-          <!-- Film Card 2 -->
-             <div class="film-card">
-              <img src="Films/Film 2.jpg" alt="Film Poster" class="film-poster">
-              <h3 class="film-title">The Reclaimers</h3>
-              <p class="film-director"></p>
-             </div>
-          </div>
-          
-          <!-- Film Card 3 -->
-             <div class="film-card">
-              <img src="Films/Film 3.jpg" alt="Film Poster" class="film-poster">
-              <h3 class="film-title">Addiction</h3>
-              <p class="film-director"></p>
-             </div>
-          </div>
+    // Change nav on scroll
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
 
-          <!-- Film Card 4 -->
-             <div class="film-card">
-              <img src="Films/Film 4.jpg" alt="Film Poster" class="film-poster">
-              <h3 class="film-title">Lobola</h3>
-              <p class="film-director"></p>
-             </div>
-          </div>
+  const heroImage = document.querySelector('.hero-blur-image');
 
-          <!-- Film Card 5 -->
-             <div class="film-card">
-              <img src="Films/Film 2.jpg" alt="Film Poster" class="film-poster">
-              <h3 class="film-title">Khumba</h3>
-              <p class="film-director">Anthony Silverston</p>
-             </div>
-          </div>
+  window.addEventListener('scroll', () => {
+    const scrollY = window.scrollY;
+    const maxScroll = 300;
 
-          <!-- Film Card 6 -->
-             <div class="film-card">
-              <img src="Films/Film 2.jpg" alt="Film Poster" class="film-poster">
-              <h3 class="film-title">Zambezia</h3>
-              <p class="film-director">Wayne Thornley</p>
-             </div>
-          </div>
+    const opacity = Math.max(0, 1 - scrollY / maxScroll);
+    const blur = Math.min(20, scrollY / 10); // up to 20px blur
 
-          <!-- === YOU'LL ADD MORE DEPENDING ON HOW MANY THERE ARE === -->
-          </section>
+    heroImage.style.opacity = opacity;
+    heroImage.style.filter = `blur(${blur}px)`;
+  });
 
-
-          <!-- === GALLERY SECTION === -->
-           <section class="gallery-section">
-            <h2 class="section-title">Festival Moments</h2>
-            <div class="gallery-grid">
-
-              <!-- Image 1 -->
-               <div class="gallery-item">
-                <img src="images/Gallery/Festival1.jpg" alt="Audience at film screening">
-                <div class="caption"></div> <!-- Hover Caption -->
-               </div>
-
-              <!-- Image 2 -->
-               <div class="gallery-item">
-                <img src="images/Gallery/Festival2.jpg" alt="Filmmaker Q&A">
-                <div class="caption"></div>
-                </div>             
-
-              <!-- Image 3 -->
-               <div class="gallery-item">
-                <img src="images/Gallery/Festival3.jpg" alt="Award Ceremony">
-                <div class="caption"></div>
-               </div>
-
-               <!-- Image 4 -->
-                <div class="gallery-item">
-                  <img src="images/Gallery/Festival 4.jpg" alt="Workshop">
-                  <div class="caption">Cinematography Workshop</div>
-                </div>
-
-                <!-- Image 5 -->
-                 <div class="gallery-item">
-                  <img src="images/Gallery/Festival 5.jpg" alt="Red Carpet">
-                  <div class="caption"></div>
-                 </div>
-                 <!-- Images 6-->
-                <div class="gallery-item">
-                  <img src="images/Gallery/Festival 6.jpg" alt="Group Photo">
-                  <div class="caption">2024 Filmmakers</div>
-                </div>
-            </div>
-        </section>
-          
-        <footer>
-          <h3 class="contact-title">For Enquiries</h3>
-          <p class="contact-info">060 498 3032</p>
-          <p class="contact-info">tdtlhalogang@gmail.com</p>
-
-          <div class="social-links">
-            <a href="link">Istagram</a>
-            <a href="link">Twitter</a>
-            <a href="link">Facebook</a>
-          </div>
-
-          <p class="&copy;">2025 Mbawula Youth Film Festival. All rights reserved.</p>
-        </footer>
-          </html>
+  
+  
+  </script>
+</body>
+</html>
