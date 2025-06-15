@@ -17,6 +17,12 @@
   format(opentype);
 }
 
+@font-face {
+  font-family: 'Mistral', sans-serif;
+  src: url(Fonts/MISTRAL.TTF)
+  format(truetype);
+}
+
 /* RESET */
 * {
   margin: 0;
@@ -228,7 +234,7 @@ header.scrolled .logo-bw {
 }
 
 .film-reel img {
-  height: 60px; /* Adjust based on your image */
+  height: 150px; /* Adjust based on your image */
   width: auto;
   object-fit: contain;
   opacity: 0.8;
