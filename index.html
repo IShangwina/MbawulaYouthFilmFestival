@@ -44,11 +44,11 @@
 
     <nav class="nav-links">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Films</a></li>
-        <li><a href="#">Charity</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html#about">About</a></li>
+       <li><a href="/films.html">Films</a></li>
+        <li><a href="/404.html">Charity</a></li>
+        <li><a href="/404.html">Contact</a></li>
       </ul>
     </nav>
 
@@ -62,11 +62,11 @@
     <!-- MOBILE DROPDOWN NAV -->
     <nav class="mobile-menu" id="mobileMenu">
       <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Films</a></li>
-        <li><a href="#">Charity</a></li>
-        <li><a href="#">Contact</a></li>
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/index.html">About</a></li>
+        <li><a href="/films.html">Films</a></li>
+        <li><a href="/404.html">Charity</a></li>
+        <li><a href="/404.html">Contact</a></li>
       </ul>
     </nav>
   </header>
@@ -76,18 +76,43 @@
   ===================== -->
   <section class="hero">
     <div class="hero-content">
+      <img src="Assets/MBAWULA 2025 LOGO 2.png" alt="Mbawula Logo" class="hero-logo" />
       <h1>30 Years of South Africa Through Film</h1>
       <p>Celebrating the power of youth storytelling through screenings, discussions, and workshops.</p>
       <a href="#" class="cta-btn">Submit Your Film</a>
     </div>
   </section>
 
+
+
+<!-- ====================
+    ABOUT SECTION
+==================== -->
+<section class="about-section">
+  <div class="about-container">
+    <h2>About the Festival</h2>
+    <p>
+Mbawula Youth Film Festival is an annual storytelling initiative based in Kimberley, Northern Cape. With additional pop-up screenings in towns like Ritchie and Douglas, the festival brings quality films to local communities across the province.
+</p>
+<p>
+Focused on nurturing the art of storytelling and encouraging literacy through film, Mbawula showcases powerful documentaries and family-friendly films. The festival explores themes of human rights, social issues, entertainment, and environmental awareness in a non-competitive setting.
+</p>
+
+  </div>
+</section>
 <!-- Add this right before your footer -->
 <div class="film-reel-container">
   <div class="film-reel">
     <img src="Assets/MBAWULA 2025 - FILM REEL.png" alt="Film reel texture">
     <img src="Assets/MBAWULA 2025 - FILM REEL.png" alt="Film reel texture"> <!-- Duplicate for seamless looping -->
   </div>
+</div>
+<!-- ====================
+    FLOATING DATE BOX
+==================== -->
+<div class="floating-date-box">
+  <img src="Assets/MBAWULA 2025 - DATE.png" alt="Festival Date" class="date-img" />
+  <div class="countdown" id="countdown">Loading countdown...</div>
 </div>
 
   <!-- ====================
@@ -146,10 +171,53 @@
 
     heroImage.style.opacity = opacity;
     heroImage.style.filter = `blur(${blur}px)`;
+  });  
+
+  /* ===============
+      COUNTDOWN
+=============== */
+
+// Countdown Timer
+const countdownElement = document.getElementById('countdown');
+const eventDate = new Date("2025-08-06T00:00:00"); // Replace with your actual date
+
+function updateCountdown() {
+  const now = new Date();
+  const timeLeft = eventDate - now;
+
+  if (timeLeft <= 0) {
+    countdownElement.innerText = "It's today!";
+    return;
+  }
+
+  const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+  const minutes = Math.floor((timeLeft / 1000 / 60) % 60);
+  const seconds = Math.floor((timeLeft / 1000) % 60);
+
+  countdownElement.innerText =
+    `${days}d ${hours}h ${minutes}m ${seconds}s`;
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown(); // Initial call
+
+const heroLogo = document.querySelector('.hero-logo');
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 150) {
+      heroLogo.classList.add('shrink');
+    } else {
+      heroLogo.classList.remove('shrink');
+    }
   });
 
-  
+
   
   </script>
+
+
+
+
 </body>
 </html>
